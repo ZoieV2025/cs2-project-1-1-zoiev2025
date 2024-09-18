@@ -53,6 +53,16 @@ double litersWater = surfaceLayer * 1000;
 System.out.print("Question 3.c: ");
 System.out.println(litersWater);
 
+// #211 
+
+//1. Problem 1 - If the stars in the Apollo photo have a brightness of 2.5 cents/sec, how many cents
+// will be collected in a 20-second time-exposure? 
+double brightnessCS = 2.5; // cents/sec
+double timeExposureS = 20; //seconds
+double brightnessTotal = 2.5 * 20;
+System.out.println("Problem 211: ");
+System.out.print("question 1: ");
+System.out.println(brightnessTotal);
 
    }
 }
