@@ -59,10 +59,38 @@ System.out.println(litersWater);
 // will be collected in a 20-second time-exposure? 
 double brightnessCS = 2.5; // cents/sec
 double timeExposureS = 20; //seconds
-double brightnessTotal = 2.5 * 20;
+double brightnessTotal = brightnessCS * timeExposureS; // multiplying b/c seconds cancel out
+// brightnessTotal = how many cents the stars omit in 20 seconds
 System.out.println("Problem 211: ");
 System.out.print("question 1: ");
-System.out.println(brightnessTotal);
+System.out.println(brightnessTotal); // unit: cents
+
+//2. - If the lunar surface has a brightness of 500 cents/second, how many cents will be
+//collected in a 20-second exposure? 
+double brightnessLunar = 500; //cents/second
+double exposureTime = 20; // seconds
+double totalCents = brightnessLunar * exposureTime; // seconds cancel out; moon
+System.out.print("question 2: ");
+System.out.println(totalCents);
+
+//3. - If the lunar surface is scaled to a camera contrast setting of 100%, A) How bright, in
+//cents, is a 1% contrast change? B) What contrast change do the stars represent?
+
+//a.
+double percentChange = .01;//percent
+double contrastChangeBright = totalCents * percentChange;
+System.out.print("question 3a: ");
+System.out.println(contrastChangeBright); // unit: cents
+
+//b.
+double contrastChangeStars = brightnessTotal / totalCents;
+System.out.print("question 3b: ");
+System.out.println(contrastChangeStars); //unit: percent
+
+//4. - If the image is set to only record contrast changes of 1% or greater to bring out
+//detail on the lunar surface, will the stars be visible? Explain. 
+System.out.print("question 4: ");
+System.out.println("Since the output of the contrast of the change of the stars is .5%, it will not be visible. However, the moon will be visible because it's exposure is 100%.");
 
    }
 }
